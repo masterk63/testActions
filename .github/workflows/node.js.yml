@@ -43,3 +43,10 @@ jobs:
           host: 45.77.114.255
           username: ingeit
           password: Ingeit2017!
+      - name: ls -a via ssh
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: cd buildTest/ && npm install
+          host: 45.77.114.255
+          username: ingeit
+          password: Ingeit2017!
