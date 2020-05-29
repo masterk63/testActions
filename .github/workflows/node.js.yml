@@ -33,5 +33,5 @@ jobs:
           username: ingeit
           password: Ingeit2017!
           port: 22
-          source: 'build/'
+          source: 'src/'
           target: 'buildTest'
