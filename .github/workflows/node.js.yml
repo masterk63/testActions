@@ -35,3 +35,11 @@ jobs:
           host: 45.77.114.255
           username: ingeit
           password: Ingeit2017!
+      - name: Copy packege json
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: package.json
+          remote: buildTest/package.json
+          host: 45.77.114.255
+          username: ingeit
+          password: Ingeit2017!
