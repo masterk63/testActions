@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 console.log('test');
 console.log('ricky');
-
+const test = {};
 dotenv.config();
 const express = require('express');
 const morgan = require('morgan');
