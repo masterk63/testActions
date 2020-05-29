@@ -1,0 +1,53 @@
+{
+  "name": "mutual-congreso-afiliacion-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/bin/www",
+    "server": "nodemon --exec babel-node --inspect=127.0.0.1:9000 ./src/bin/www",
+    "server:prod": "node ./dist/bin/www",
+    "dev": "set NODE_ENV=development && npm-run-all server",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
+    "prod": "set NODE_ENV=production && npm-run-all clean build server:prod",
+    "lint": "eslint ./src --fix"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "aws-sdk": "^2.680.0",
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "helmet": "^3.21.2",
+    "image-thumbnail": "^1.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "npm-run-all": "^4.1.5",
+    "xlsx": "^0.15.6"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "nodemon": "^2.0.1",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^3.0.0"
+  }
+}
