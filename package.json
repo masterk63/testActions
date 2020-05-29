@@ -5,10 +5,10 @@
   "scripts": {
     "start": "node ./src/bin/www",
     "server": "nodemon --exec babel-node --inspect=127.0.0.1:9000 ./src/bin/www",
-    "server:prod": "node ./dist/bin/www",
+    "server:prod": "node ./build/bin/www",
     "dev": "set NODE_ENV=development && npm-run-all server",
-    "clean": "rimraf dist",
-    "build": "babel ./src --out-dir dist",
+    "clean": "rimraf build",
+    "build": "babel ./src --out-dir build",
     "prod": "set NODE_ENV=production && npm-run-all clean build server:prod",
     "lint": "eslint ./src --fix"
   },
