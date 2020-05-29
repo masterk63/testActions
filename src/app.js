@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+console.log('test');
 
 dotenv.config();
 const express = require('express');
