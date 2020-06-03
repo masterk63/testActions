@@ -31,18 +31,3 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.PASSWORD }}
-      - name: Copy packege json
-        uses: garygrossgarten/github-action-scp@release
-        with:
-          local: package.json
-          remote: buildTest/package.json
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.PASSWORD }}
-      - name: Run npm install on server
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: cd buildTest/ && npm install
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.PASSWORD }}
